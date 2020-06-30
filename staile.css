@@ -183,6 +183,10 @@ footer .clinks{
   display: inline-block;
   float: right;
 }
+
+h1{
+  color:black;
+}
 footer .clinks a{
   display: inline-block;
   margin: 10px auto 10px 130.8px ;
