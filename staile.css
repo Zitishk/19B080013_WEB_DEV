@@ -1,3 +1,15 @@
+@font-face {
+    font-family: 'introrustg-base2line';
+    src: url('Fonts/introrustg_base2line_macroman/introrustg-base2line-webfont.woff2') format('woff2'),
+         url('Fonts/introrustg_base2line_macroman/introrustg-base2line-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+/*reset */
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -95,21 +107,27 @@ input, select {
 *{
   text-decoration: none;
 }
+/*reset end*/
 
+
+html{
+  font-size: 10px;
+}
 body{
-  background-color: #f3f3f3;
+  background-color: #08AEEA;
+  background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);
 }
 header{
-  background-color: #fff;
+
+  background-color: rgba(0,180,180,1.0);
   width: 100%;
   height: 100px;
   font-family: arial;
   font-weight: 200;
   font-size: 15px;
-  color: #111
 }
 header .Brand{
-  display: block;
+  display: inline-block;
   margin: 31px 0;
   padding: 0 20px 0 40px;
   text-transform: uppercase;
@@ -119,38 +137,63 @@ header .Brand{
   font-weight: 600;
   line-height: 38px;
   font-size: 20px;
-  color: #435
+  color: white;
 }
-header nav ul {
+header ul {
   display: block;
+  width: 60%;
   margin: 20px 10px 20px 0;
   float: right;
+  padding: none;
 }
-header nav ul li {
-  display: inline-block;
+header li {
+  display: inline;
   list-style: none;
-  line-height: 60px;
-  padding: 0 16px;
-  text-transform: uppercase;
+}
+a{
+  display: inline-block;
+  width: 24.5%;
+  margin-right: 0.1%;
+  text-align: center;
+  line-height: 3;
+  outline: none;
+}
+a:link {
+  color: white;
+}
+
+a:visited {
+  color: white;
+}
+
+a:focus, a:hover {
+  border-right: 1px solid;
+  background: rgba(0,0,0,0.5);
+}
+
+a:active {
+  color: black;
+  background: white;
 }
 
 main {
-  font-family: serif;
+  color: rgba(170,50,170,1.0);
+  font-family: "Alegreya", serif;
   font-weight: 300;
-  font-size: 25px;
-  margin: auto 10px auto 20px;
+  font-size: 2.5rem;
+  margin: 120px 10px auto 20px;
   line-height: normal;
 
 }
 
 .heads {
   text-align: center;
-  font-family: serif;
+  font-family: 'Lobster Two', cursive;
   text-transform: uppercase;
-  font-style: oblique;
   font-weight: 300;
-  font-size: 35px;
+  font-size: 3.8rem;
   line-height: 50px;
+  padding-top: 15px;
   margin: 10px 0 15px 0;
 }
 .basic img {
@@ -160,24 +203,64 @@ main {
   margin-right: auto;
   height: 350px;
   width: 300px;
+  border: 10px outset black;
+  border-radius: 10px;
+  transition: width 1s, height 1s, border 1s, filter 1s;
+}
+
+.basic img:hover{
+  filter: blur(8px);
+  -webkit-filter: blur(2px);
+  height: 370px;
+  width: 320px;
+  border-width: 0px;
+}
+
+#GI{
+  font-family: 'introrustg-base2line',sans-serif;
+  font-size: 8rem;
+  color: rgba(250,00,00,1.0);
+  text-shadow:
+                0 1px rgba(170, 00, 00, 1.0),
+                -1px 0 rgba(170,00,00,1.0),
+                -1px 2px rgba(90,00,00,1.0),
+                -2px 1px rgba(170,00,00,1.0),
+                -2px 3px rgba(90,00,00,1.0),
+                -3px 2px rgba(170,00,00,1.0),
+                -3px 4px rgba(90,00,00,1.0),
+                -4px 3px rgba(170,00,00,1.0),
+                -4px 5px rgba(90,00,00,1.0),
+                -5px 4px rgba(170,00,00,1.0),
+                -5px 6px rgba(90,00,00,1.0),
+                -6px 5px rgba(170,00,00,1.0),
+                -6px 7px rgba(90,00,00,1.0),
+                -7px 6px rgba(170,00,00,1.0),
+                -7px 8px rgba(90,00,00,1.0),
+                -8px 7px rgba(170,00,00,0.5);
+}
+.hobbs ul{
+  text-indent: 10px;
+  list-style-position: inside;
 }
 #Details{
   width: fit-content;
   margin: 30px auto;}
 #Details table,tr,td,th{
-  background-color: brown;
   border: 3px solid black;
   border-collapse: separate;
   border-spacing: 2px;
 }
 #Details table tr,td,th{
-  background-color: white;
+  background-color: rgba(0, 10, 10, 0.0);
   font-size: 29px;
   padding: 10px 10px;
   width: 500px;
 }
 
 footer{
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
   margin: 15px 0 0 0;
   overflow: hidden;
   background-color: black;
