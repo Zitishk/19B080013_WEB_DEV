@@ -44,7 +44,7 @@ a:active {
   background: white;
 }
 
-.basic img {
+img {
   display: block;
   margin-top: 20px;
   margin-left: auto;
@@ -56,7 +56,7 @@ a:active {
   transition: width 1s, height 1s, border 1s, filter 1s;
 }
 
-.basic img:hover{
+img:hover{
   filter: blur(8px);
   -webkit-filter: blur(2px);
   height: 370px;
